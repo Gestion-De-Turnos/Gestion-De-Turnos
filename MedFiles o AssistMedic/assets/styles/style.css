@@ -57,10 +57,10 @@ nav .iniciar_sesion:hover{
     color: white;
     background-color: rgb(98, 165, 107);
     transition: 0.3s;
-}
+} 
 
 .contenedor{
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
 
@@ -92,9 +92,13 @@ aside{
     background-color: rgb(75, 161, 87);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 0 0 300px;
     border: 3px solid white;
 }
+
 
 footer p{
     color:rgb(235, 235, 235);
