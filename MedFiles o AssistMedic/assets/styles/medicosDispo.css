@@ -79,12 +79,44 @@ main{
 
 main h1{
     margin: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+main .seccion{
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 main p{
     margin-left: 10px;
     margin-right:10px;
     color: white;
+    font-size: 15px;
+}
+
+main .titulo-seccion{
+    color: white;
+    font-weight: bold;
+}
+
+main .pie-seccion{
+    color:rgb(238, 238, 238);
+    font-weight: bold;
+}
+
+main .pagination{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .page-link{
+    color: white;
+    background-color: rgb(41, 98, 50);
+    font-weight: bold;
 }
 
 aside{
