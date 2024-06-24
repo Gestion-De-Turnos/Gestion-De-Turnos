@@ -85,6 +85,16 @@ main p{
     margin-left: 10px;
     margin-right:10px;
     color: white;
+    font-weight: 900;
+}
+
+main .titulo-seccion{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(41, 98, 50);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 aside{

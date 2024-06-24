@@ -92,6 +92,7 @@ main .seccion{
 main p{
     margin-left: 10px;
     margin-right:10px;
+    font-weight: 900;
     color: white;
     font-size: 15px;
 }
@@ -104,10 +105,14 @@ main .titulo-seccion{
 main .pie-seccion{
     color:rgb(238, 238, 238);
     font-weight: bold;
+    background-color: rgb(47, 110, 56);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 20px;
 }
 
 main .pagination{
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;

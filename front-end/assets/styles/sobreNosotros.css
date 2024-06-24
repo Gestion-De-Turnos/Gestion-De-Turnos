@@ -78,15 +78,35 @@ main{
 
 main h1{
     margin: 10px;
+    font-weight: bold;
+}
+
+main h3{
+    color: white;
+    font-weight: bold;
 }
 
 main p{
     margin-left: 10px;
     margin-right:10px;
-    color: white;
+    color: rgb(245, 245, 245);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
+
+main .seccion{
+    margin-left: 20px;
+}
+
+main .titulo-seccion{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(41, 98, 50);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 aside{
     margin: 10px;
