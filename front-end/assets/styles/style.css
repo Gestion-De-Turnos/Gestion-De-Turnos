@@ -76,6 +76,15 @@ main{
     border: 3px solid white;
 }
 
+main img{
+    width: 200px;
+}
+
+main .imagen-seccion{
+    display: flex;
+    justify-content: center;
+}
+
 main h1{
     margin: 10px;
 }
