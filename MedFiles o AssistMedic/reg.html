@@ -65,15 +65,17 @@
                                             <div class="col-md-6 mb-4">
                                                 <div data-mdb-input-init class="form-outline">
                                                     <input placeholder="Ingresar Nombre" type="text" id="form3Example1m"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m">Nombres</label>
+                                                        class="form-control form-control-lg"
+                                                        onkeypress="return soloLetras(event)" maxlength="18" />
+                                                    <label class="form-label" for="form3Example1m">Nombre</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div data-mdb-input-init class="form-outline">
-                                                    <input placeholder="Ingresar Apellido" type="text" id="form3Example1n"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1n">Apellido/s</label>
+                                                    <input placeholder="Ingresar Apellido" type="text"
+                                                        id="form3Example1n" class="form-control form-control-lg"
+                                                        onkeypress="return soloLetras(event)" maxlength="12" />
+                                                    <label class="form-label" for="form3Example1n">Apellido</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,16 +83,18 @@
                                         <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div data-mdb-input-init class="form-outline">
-                                                    <input placeholder="Ingresar Ciudad" type="text" id="form3Example1m1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1m1">Ciudad</label>
+                                                    <input placeholder="Ingresar DNI" type="number" id="form3Example1m1"
+                                                        class="form-control form-control-lg"
+                                                        onkeypress="return soloNumeros(event)" oninput="return contIn(this)"/>
+                                                    <label class="form-label" for="form3Example1m1">DNI (sin comas o puntos)</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div data-mdb-input-init class="form-outline">
-                                                    <input placeholder="Ingresar localidad" type="text" id="form3Example1n1"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example1n1">Localidad
+                                                    <input placeholder="Ingresar Ciudad" type="text"
+                                                        id="form3Example1n1" class="form-control form-control-lg"
+                                                        onkeypress="return soloLetras(event)" />
+                                                    <label class="form-label" for="form3Example1n1">Ciudad
                                                     </label>
                                                 </div>
                                             </div>
@@ -102,7 +106,8 @@
                                             <label class="form-label" for="form3Example8">Dirección</label>
                                         </div>
 
-                                        <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                        <div class="d-md-flex justify-content-start align-items-center mb-4 py-2"
+                                            style="display: flex; justify-content: space-between !important;">
 
                                             <h6 class="mb-0 me-4">Género: </h6>
 
@@ -118,10 +123,12 @@
                                                 <label class="form-check-label" for="maleGender">Hombre</label>
                                             </div>
 
-                                            <div class="form-check form-check-inline mb-0">
+                                            <div class="form-check form-check-inline mb-0"
+                                                style="display: flex; align-items: center;">
                                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                     id="otherGender" value="option3" />
-                                                <label class="form-check-label" for="otherGender">Otro</label>
+                                                <label class="form-check-label" for="otherGender"
+                                                    style="text-align: center;">Otro</label>
                                             </div>
 
                                         </div>
@@ -130,7 +137,7 @@
                                             <p style="text-align: center;">Fecha de Nacimiento: </p>
                                             <div class="col-md-6 mb-4" style="width: 30%;">
 
-                                                <select data-mdb-select-init>
+                                                <select data-mdb-select-init id="seld">
                                                     <option value="1">Día</option>
                                                     <option value="2">1</option>
                                                     <option value="3">2</option>
@@ -146,26 +153,26 @@
                                             </div>
                                             <div class="col-md-6 mb-4" style="width: 30%;">
 
-                                                <select data-mdb-select-init>
+                                                <select data-mdb-select-init id="selm">
                                                     <option value="1">Mes</option>
-                                                    <option value="2">1</option>
-                                                    <option value="3">2</option>
-                                                    <option value="4">3</option>
-                                                    <option value="5">4</option>
-                                                    <option value="6">5</option>
-                                                    <option value="7">6</option>
-                                                    <option value="8">7</option>
-                                                    <option value="9">8</option>
-                                                    <option value="10">9</option>
-                                                    <option value="11">10</option>
-                                                    <option value="12">11</option>
-                                                    <option value="13">12</option>
+                                                    <option value="2">Enero</option>
+                                                    <option value="3">Febrero</option>
+                                                    <option value="4">Marzo</option>
+                                                    <option value="5">Abril</option>
+                                                    <option value="6">Mayo</option>
+                                                    <option value="7">Junio</option>
+                                                    <option value="8">Julio</option>
+                                                    <option value="9">Agosto</option>
+                                                    <option value="10">Septiembre</option>
+                                                    <option value="11">Octubre</option>
+                                                    <option value="12">Noviembre</option>
+                                                    <option value="13">Diciembre</option>
                                                 </select>
 
                                             </div>
                                             <div class="col-md-6 mb-4" style="width: 30%;">
 
-                                                <select data-mdb-select-init>
+                                                <select data-mdb-select-init id="sela">
                                                     <option value="1">Año</option>
                                                     <option value="2">1960</option>
                                                     <option value="3">1965</option>
@@ -197,7 +204,7 @@
                                             <button type="button" data-mdb-button-init data-mdb-ripple-init
                                                 class="btn btn-light btn-lg">Tengo una cuenta</button>
                                             <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                                class="btn btn-danger btn-lg ms-2">Registrarse</button>
+                                                class="btn btn-danger btn-lg ms-2" id="regbtn">Registrarse</button>
                                         </div>
 
                                     </div>
@@ -209,6 +216,7 @@
             </div>
         </section>
     </main>
+    <script src="assets/js/regist.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
