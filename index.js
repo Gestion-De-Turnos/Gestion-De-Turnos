@@ -7,7 +7,9 @@ import router from "./src/routes/user.routes.js";
 import turnoRouter from "./src/routes/turno.routes.js";
 import UserEntity from "./src/models/user.model.js";
 import TurnosEntity from "./src/models/turno.model.js";
+import formEntity from "./src/models/form.model.js";
 import authRouter from "./src/routes/auth.routes.js";
+import formRouter from "./src/routes/form.routes.js";
 
 const app = Express();
 
@@ -23,6 +25,7 @@ app.use(helmet());
 app.use("/api", router);
 app.use("/api", turnoRouter);
 app.use("/auth", authRouter);
+app.use("/api", formRouter);
 
 app.use("/", (req, res) => {
   res.send("Hola Mundo!");
@@ -35,6 +38,7 @@ app.use((req, res) => {
 async function initModels() {
   await UserEntity();
   await TurnosEntity();
+  await formEntity();
 }
 
 app.listen(PORT, async () => {

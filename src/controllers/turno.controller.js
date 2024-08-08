@@ -14,7 +14,7 @@ export const getTurnos = async (req, res) => {
   try {
     const turnos = await findAll("turnos");
     console.log("Turnos obtenidos: ", turnos.length);
-    return res.json({ turnos });
+    return res.json(turnos);
   } catch (error) {
     console.error("Error al obtener Turnos: ", error.message);
     return res.status(500).json({ error: error.message });

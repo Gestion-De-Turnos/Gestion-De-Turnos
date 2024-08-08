@@ -13,11 +13,13 @@ const executeQuery = async (query, values = []) => {
 // Insertar un nuevo registro y registrar un mensaje descriptivo
 export const create = async (table, data) => {
   const columnas = Object.keys(data);
-  const consulta = `INSERT INTO ${table} (${columnas}) VALUES (${columnas.map(() => '?')})`;
+  const consulta = `INSERT INTO ${table} (${columnas}) VALUES (${columnas.map(
+    () => "?"
+  )})`;
 
   try {
     const resultado = await executeQuery(consulta, Object.values(data));
-    return `Registro insertado en ${table} con ID: ${resultado.insertId}`;
+    return resultado;
   } catch (error) {
     throw new Error(`Error al insertar en ${table}: ${error.message}`);
   }
@@ -30,7 +32,7 @@ export const findAll = async (table) => {
   // console.log(
   //   `Se han obtenido ${results.length} registros de la table ${table}`
   // );
-  return `Se han obtenido ${results.length} registros de la table ${table}`;
+  return results;
 };
 
 // Buscar un registro por una condición y registrar un mensaje descriptivo
